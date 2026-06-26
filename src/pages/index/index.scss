@@ -1,0 +1,133 @@
+.home-page {
+  min-height: 100vh;
+}
+
+.hero {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  padding: 48px 24px 56px;
+  text-align: center;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: -40px;
+    right: -40px;
+    width: 140px;
+    height: 140px;
+    background: rgba(255,255,255,0.08);
+    border-radius: 50%;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -30px;
+    left: -30px;
+    width: 100px;
+    height: 100px;
+    background: rgba(255,255,255,0.06);
+    border-radius: 50%;
+  }
+
+  &__icon {
+    font-size: 48px;
+    margin-bottom: 8px;
+    position: relative;
+    z-index: 1;
+  }
+
+  &__title {
+    font-family: var(--font-heading);
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 4px;
+    position: relative;
+    z-index: 1;
+    letter-spacing: -0.5px;
+  }
+
+  &__desc {
+    font-size: 14px;
+    opacity: 0.85;
+    position: relative;
+    z-index: 1;
+  }
+}
+
+.difficulty-section {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  position: relative;
+  top: -20px;
+}
+
+.difficulty-row {
+  display: flex;
+  gap: 10px;
+}
+
+.difficulty-card {
+  flex: 1;
+  background: #fff;
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 16px 12px;
+  text-align: center;
+  transition: all 0.2s ease;
+
+  &--selected {
+    background: var(--color-primary);
+    border-color: var(--color-primary);
+    color: #fff;
+    box-shadow: 0 4px 16px rgba(37, 99, 235, 0.3);
+
+    .difficulty-card__label {
+      color: #fff;
+    }
+
+    .difficulty-card__subtitle {
+      color: rgba(255,255,255,0.8);
+    }
+  }
+
+  &__icon {
+    font-size: 22px;
+    margin-bottom: 4px;
+  }
+
+  &__label {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--color-primary);
+  }
+
+  &__subtitle {
+    font-size: 11px;
+    color: var(--color-text-secondary);
+    margin-top: 2px;
+  }
+}
+
+.cta-button {
+  background: linear-gradient(135deg, var(--color-accent), var(--color-accent-dark));
+  color: #fff;
+  padding: 16px;
+  border-radius: var(--radius-full);
+  font-weight: 700;
+  font-size: 18px;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(245, 158, 11, 0.35);
+  margin-top: 4px;
+}
+
+.footer-hint {
+  text-align: center;
+  font-size: 12px;
+  color: var(--color-text-secondary);
+  margin-top: 24px;
+}
