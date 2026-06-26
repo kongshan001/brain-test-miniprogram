@@ -1,0 +1,113 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - heading "Superpowers Brainstorming" [level=1] [ref=e3]:
+      - link "Superpowers Brainstorming" [ref=e4] [cursor=pointer]:
+        - /url: https://github.com/obra/superpowers
+    - generic [ref=e5]: Connected
+  - generic [ref=e7]:
+    - heading "脑力测试 — 优化版 UI 设计" [level=2] [ref=e8]
+    - paragraph [ref=e9]: Vibrant & Block-based 风格 · Fredoka + Nunito 字体 · 蓝紫金配色
+    - generic [ref=e10]:
+      - heading "设计系统" [level=3] [ref=e11]
+      - generic [ref=e17]: Bg
+      - paragraph [ref=e18]: Primary Blue · Secondary Purple · Accent Gold · Bold · Playful · 8dp rhythm
+    - generic [ref=e19]:
+      - generic [ref=e20] [cursor=pointer]:
+        - generic [ref=e21]:
+          - generic [ref=e25]:
+            - generic [ref=e26]: 🧠
+            - generic [ref=e27]: 脑力测试
+            - generic [ref=e28]: 3分钟 · 10道题 · 测测你的脑力值
+          - generic [ref=e29]:
+            - generic [ref=e30]:
+              - generic [ref=e31]:
+                - generic [ref=e32]: 🌟
+                - generic [ref=e33]: 简单
+                - generic [ref=e34]: 热身模式
+              - generic [ref=e35]:
+                - generic [ref=e36]: ⚡
+                - generic [ref=e37]: 中等
+                - generic [ref=e38]: 推荐
+              - generic [ref=e39]:
+                - generic [ref=e40]: 🔥
+                - generic [ref=e41]: 困难
+                - generic [ref=e42]: 挑战模式
+            - generic [ref=e43]: 开始测试
+        - generic [ref=e44]:
+          - heading "首页" [level=3] [ref=e45]
+          - paragraph [ref=e46]: 渐变Hero + 品牌感。三难度横向卡片，中等默认选中。金色渐变CTA，视觉权重最高。
+      - generic [ref=e47] [cursor=pointer]:
+        - generic [ref=e48]:
+          - generic [ref=e49]:
+            - generic [ref=e50]: "3"
+            - generic [ref=e51]: ⏱ 18s
+          - generic [ref=e52]:
+            - generic [ref=e53]:
+              - generic [ref=e54]: 🔢
+              - generic [ref=e55]: 2, 4, 8, 16, ?
+              - generic [ref=e56]: 请问 "?" 处应该是什么？
+            - generic [ref=e57]:
+              - generic [ref=e58]: A. 24
+              - generic [ref=e59]: B. 30
+              - generic [ref=e60]: C. 32 ✓
+              - generic [ref=e61]: D. 36
+        - generic [ref=e62]:
+          - heading "答题页" [level=3] [ref=e63]
+          - paragraph [ref=e64]: 紧凑进度条+题号标签+倒计时。题干卡片化。选中：0.3s过渡，绿色正确/红色错误。
+    - generic [ref=e65]:
+      - generic [ref=e66] [cursor=pointer]:
+        - generic [ref=e67]:
+          - generic [ref=e68]:
+            - generic [ref=e69]: 你的脑力值
+            - generic [ref=e70]: "85"
+            - generic [ref=e71]: 等级 A · 才思敏捷
+          - generic [ref=e72]:
+            - generic [ref=e73]:
+              - generic [ref=e74]:
+                - generic [ref=e75]: "8"
+                - generic [ref=e76]: 答对
+              - generic [ref=e78]:
+                - generic [ref=e79]: "2"
+                - generic [ref=e80]: 答错
+              - generic [ref=e82]:
+                - generic [ref=e83]: 2.1s
+                - generic [ref=e84]: 均速
+            - generic [ref=e85]: 📤 生成分享海报
+            - generic [ref=e86]: 再做一次
+        - generic [ref=e87]:
+          - heading "结果页" [level=3] [ref=e88]
+          - paragraph [ref=e89]: 大数字冲击力+毛玻璃标签。三列统计。金渐层主CTA，蓝色文字次操作。
+      - generic [ref=e90] [cursor=pointer]:
+        - generic [ref=e92]:
+          - generic [ref=e93]:
+            - generic [ref=e94]: 脑力测试报告
+            - generic [ref=e95]: "85"
+            - generic [ref=e96]: 等级 A · 才思敏捷
+            - generic [ref=e97]:
+              - generic [ref=e98]: ✓ 8 答对
+              - generic [ref=e99]: ⏱ 2.1s 均速
+          - generic [ref=e100]: 长按识别小程序码
+          - generic [ref=e101]: 码
+          - generic [ref=e102]: 测测你的脑力值 →
+        - generic [ref=e103]:
+          - heading "分享海报" [level=3] [ref=e104]
+          - paragraph [ref=e105]: 卡片式海报：渐变品牌区+分数+数据+小程序码+行动号召。圆润圆角，留白足。
+    - generic [ref=e106]:
+      - heading "核心优化点" [level=3] [ref=e107]
+      - generic [ref=e108]:
+        - generic [ref=e109]:
+          - heading "改进" [level=4] [ref=e110]
+          - list [ref=e111]:
+            - listitem [ref=e112]: 渐变背景替代纯色，情绪更强
+            - listitem [ref=e113]: 8dp统一间距，视觉节奏一致
+            - listitem [ref=e114]: 难度卡片默认推荐"中等"，减少决策摩擦
+            - listitem [ref=e115]: 选项反馈0.3s平滑过渡
+            - listitem [ref=e116]: 结果页"值得截屏"的大数字冲击力
+            - listitem [ref=e117]: 按钮层级：金色主CTA > 蓝色文字次操作
+        - generic [ref=e118]:
+          - heading "移除" [level=4] [ref=e119]
+          - list [ref=e120]:
+            - listitem [ref=e121]: 首页冗余文字
+            - listitem [ref=e122]: 答题页顶栏得分数字（太挤）
+            - listitem [ref=e123]: 多余分隔装饰
+  - generic [ref=e124]: Click an option above, then return to the terminal

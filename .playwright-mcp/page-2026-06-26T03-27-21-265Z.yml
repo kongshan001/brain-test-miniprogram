@@ -1,0 +1,82 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - heading "Superpowers Brainstorming" [level=1] [ref=e3]:
+      - link "Superpowers Brainstorming" [ref=e4] [cursor=pointer]:
+        - /url: https://github.com/obra/superpowers
+    - generic [ref=e5]: Connected
+  - generic [ref=e7]:
+    - heading "页面流程 & 核心页面设计" [level=2] [ref=e8]
+    - paragraph [ref=e9]: 方案一（MVP）：4 个核心页面，极简闭环 ── 首页 → 答题 → 结果 → 分享
+    - generic [ref=e10]:
+      - heading "已确认的设计决策" [level=3] [ref=e11]
+      - list [ref=e13]:
+        - listitem [ref=e14]: 目标：大众娱乐 + 学生/家长 | MVP 趣味烧脑题 | 免费获客 | 轻分享
+        - listitem [ref=e15]: 技术栈：Taro + React + TypeScript + 微信云开发
+    - generic [ref=e16]:
+      - generic [ref=e17] [cursor=pointer]:
+        - generic [ref=e18]:
+          - generic [ref=e19]: 🧠
+          - generic [ref=e20]: 脑力测试
+          - generic [ref=e21]: 看看你的脑力值有多高
+          - generic [ref=e22]:
+            - generic [ref=e23]: 简单
+            - generic [ref=e24]: 中等
+            - generic [ref=e25]: 困难
+          - generic [ref=e26]: 开始测试
+          - generic [ref=e27]: 10道题 · 约3分钟
+        - generic [ref=e28]:
+          - heading "页面 1 — 首页" [level=3] [ref=e29]
+          - paragraph [ref=e30]: 品牌露出 + 难度选择 + CTA。极简，零认知负担。
+      - generic [ref=e31] [cursor=pointer]:
+        - generic [ref=e32]:
+          - generic [ref=e33]:
+            - generic [ref=e34]: 第 3/10 题
+            - generic [ref=e35]: ⏱ 18s
+            - generic [ref=e36]: ⭐ 20分
+          - generic [ref=e37]:
+            - text: 2, 4, 8, 16, ?
+            - text: 请问 "?" 处应该是什么？
+          - generic [ref=e38]:
+            - generic [ref=e39]: A. 24
+            - generic [ref=e40]: B. 30
+            - generic [ref=e41]: C. 32 ✓
+            - generic [ref=e42]: D. 36
+        - generic [ref=e43]:
+          - heading "页面 2 — 答题页" [level=3] [ref=e44]
+          - paragraph [ref=e45]: 顶栏：进度条+倒计时+得分。题干居中。4 选项选中后绿/红反馈，自动跳下一题。
+    - generic [ref=e46]:
+      - generic [ref=e47] [cursor=pointer]:
+        - generic [ref=e48]:
+          - generic [ref=e49]: 你的脑力值
+          - generic [ref=e50]: "85"
+          - generic [ref=e51]: 等级：A · 才思敏捷
+          - generic [ref=e52]:
+            - generic [ref=e53]:
+              - generic [ref=e54]:
+                - generic [ref=e55]: "8"
+                - generic [ref=e56]: 答对
+              - generic [ref=e57]:
+                - generic [ref=e58]: "2"
+                - generic [ref=e59]: 答错
+              - generic [ref=e60]:
+                - generic [ref=e61]: 2.1s
+                - generic [ref=e62]: 均速
+            - generic [ref=e63]: 生成分享海报
+            - generic [ref=e64]: 再做一次
+        - generic [ref=e65]:
+          - heading "页面 3 — 结果页" [level=3] [ref=e66]
+          - paragraph [ref=e67]: 大字分数+等级。统计卡片（对/错/速度）。主按钮→分享，次按钮→重测。
+      - generic [ref=e68] [cursor=pointer]:
+        - generic [ref=e70]:
+          - generic [ref=e71]:
+            - generic [ref=e72]: 我的脑力测试报告
+            - generic [ref=e73]: "85"
+            - generic [ref=e74]: 等级 A · 才思敏捷
+            - generic [ref=e75]: 答对 8 题 · 均速 2.1s
+          - generic [ref=e76]: 长按识别小程序码，测测你的脑力值
+          - generic [ref=e77]: 小程序码
+        - generic [ref=e78]:
+          - heading "页面 4 — 分享海报" [level=3] [ref=e79]
+          - paragraph [ref=e80]: 云函数 Canvas 生成。分数+等级+数据+小程序码。保存相册或转发。
+    - generic [ref=e82]: 请对以上 4 个页面设计给出反馈，确认后进入下一步（撰写设计文档）。
+  - generic [ref=e83]: Click an option above, then return to the terminal
