@@ -1,0 +1,12 @@
+{
+  "miniprogramRoot": "dist/",
+  "cloudfunctionRoot": "cloud/functions/",
+  "setting": {
+    "urlCheck": true,
+    "es6": true,
+    "postcss": true,
+    "minified": true
+  },
+  "appid": "{{WEAPP_APPID}}",
+  "projectname": "brain-test"
+}

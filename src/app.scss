@@ -1,0 +1,47 @@
+:root {
+  --color-primary: #2563EB;
+  --color-primary-light: #3B82F6;
+  --color-secondary: #7C3AED;
+  --color-accent: #F59E0B;
+  --color-accent-dark: #F97316;
+  --color-background: #EFF6FF;
+  --color-foreground: #0F172A;
+  --color-muted: #F1F5FD;
+  --color-border: #E4ECFC;
+  --color-success: #22C55E;
+  --color-error: #EF4444;
+  --color-text-secondary: #64748B;
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+  --radius-full: 30px;
+
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 48px;
+
+  --font-heading: 'Fredoka', 'PingFang SC', sans-serif;
+  --font-body: 'Nunito', 'PingFang SC', sans-serif;
+}
+
+page {
+  background-color: var(--color-background);
+  font-family: var(--font-body);
+  font-size: 16px;
+  color: var(--color-foreground);
+  line-height: 1.5;
+}
+
+button, view[onClick] {
+  touch-action: manipulation;
+}
+
+button, .tappable {
+  min-height: 44px;
+  min-width: 44px;
+}
