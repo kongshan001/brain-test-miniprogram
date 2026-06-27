@@ -45,7 +45,7 @@ const config = {
     },
   },
   h5: {
-    publicPath: '/',
+    publicPath: '/brain-test-miniprogram/',
     staticDirectory: 'static',
     postcss: {
       autoprefixer: {
