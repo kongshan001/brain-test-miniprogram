@@ -5,25 +5,8 @@ import type { Question, AnswerRecord } from '@/types';
 import { QUIZ_COUNT, DEFAULT_TIME_LIMIT } from '@/utils/constants';
 import { calcTotalScore, calcStats } from '@/utils/scoring';
 import { fetchQuestions, saveResult } from '@/services/cloud';
+import { getMockQuestions } from '@/utils/mockQuestions';
 import './index.scss';
-
-function getMockQuestions(difficulty: number): Question[] {
-  const mock: Question = {
-    _id: `mock_${difficulty}`,
-    type: 'logic',
-    difficulty: difficulty as 1 | 2 | 3,
-    content: { text: '2, 4, 8, 16, ?' },
-    options: [
-      { key: 'A', text: '24' },
-      { key: 'B', text: '30' },
-      { key: 'C', text: '32' },
-      { key: 'D', text: '36' },
-    ],
-    answer: 'C',
-    time_limit: DEFAULT_TIME_LIMIT,
-  };
-  return Array(10).fill(null).map((_, i) => ({ ...mock, _id: `mock_${difficulty}_${i}` }));
-}
 
 export default function QuizPage() {
   const router = useRouter();
