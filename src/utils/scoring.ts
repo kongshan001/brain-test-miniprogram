@@ -12,8 +12,9 @@ export function calcQuestionScore(correct: boolean, timeLeft: number, timeLimit:
   return baseScore;
 }
 
-export function calcTotalScore(answers: AnswerRecord[], timeLimit: number): number {
+export function calcTotalScore(answers: AnswerRecord[], timeLimit: number, isTimed = true): number {
   const total = answers.reduce((sum, a) => {
+    if (!isTimed) return sum + (a.correct ? 10 : 0);
     return sum + calcQuestionScore(a.correct, timeLimit - a.time_spent, timeLimit);
   }, 0);
   return Math.round(total);

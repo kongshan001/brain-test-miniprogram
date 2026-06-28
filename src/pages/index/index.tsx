@@ -6,10 +6,11 @@ import './index.scss';
 
 export default function HomePage() {
   const [difficulty, setDifficulty] = useState(2);
+  const [timed, setTimed] = useState(true);
 
   const handleStart = () => {
     Taro.navigateTo({
-      url: `/pages/quiz/index?difficulty=${difficulty}`,
+      url: `/pages/quiz/index?difficulty=${difficulty}&timed=${timed ? 1 : 0}`,
     });
   };
 
@@ -34,6 +35,23 @@ export default function HomePage() {
               <Text className="difficulty-card__subtitle">{d.subtitle}</Text>
             </View>
           ))}
+        </View>
+
+        <View className="mode-toggle">
+          <View
+            className={`mode-toggle__option ${timed ? 'mode-toggle__option--active' : ''}`}
+            onClick={() => setTimed(true)}
+          >
+            <Text className="mode-toggle__icon">⏱️</Text>
+            <Text className="mode-toggle__label">计时模式</Text>
+          </View>
+          <View
+            className={`mode-toggle__option ${!timed ? 'mode-toggle__option--active' : ''}`}
+            onClick={() => setTimed(false)}
+          >
+            <Text className="mode-toggle__icon">🧘</Text>
+            <Text className="mode-toggle__label">不计时</Text>
+          </View>
         </View>
 
         <View className="cta-button" onClick={handleStart}>

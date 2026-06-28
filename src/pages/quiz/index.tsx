@@ -11,6 +11,7 @@ import './index.scss';
 export default function QuizPage() {
   const router = useRouter();
   const difficulty = Number(router.params.difficulty) || 2;
+  const isTimed = Number(router.params.timed) !== 0;
 
   const [questions, setQuestions] = useState<Question[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -38,7 +39,7 @@ export default function QuizPage() {
   }, [difficulty]);
 
   useEffect(() => {
-    if (questions.length === 0 || isAnswered) return;
+    if (questions.length === 0 || isAnswered || !isTimed) return;
 
     timerRef.current = setInterval(() => {
       const elapsed = (Date.now() - startTimeRef.current) / 1000;
@@ -56,7 +57,7 @@ export default function QuizPage() {
     return () => {
       if (timerRef.current) clearInterval(timerRef.current);
     };
-  }, [currentIndex, questions, isAnswered]);
+  }, [currentIndex, questions, isAnswered, isTimed]);
 
   const handleTimeout = useCallback(() => {
     setShowTimeout(true);
@@ -100,7 +101,7 @@ export default function QuizPage() {
     setIsSubmitting(true);
 
     const timeLimit = questions[0]?.time_limit || DEFAULT_TIME_LIMIT;
-    const score = calcTotalScore(answers, timeLimit);
+    const score = calcTotalScore(answers, timeLimit, isTimed);
 
     try {
       await saveResult(score, difficulty as 1 | 2 | 3, answers);
@@ -132,7 +133,7 @@ export default function QuizPage() {
         <View className="progress-bar">
           <View className="progress-bar__fill" style={{ width: `${progress}%` }} />
         </View>
-        <Text className="timer">⏱ {timeLeft}s</Text>
+        <Text className="timer">{isTimed ? `⏱ ${timeLeft}s` : '∞  不计时'}</Text>
       </View>
 
       <View className="question-area">
