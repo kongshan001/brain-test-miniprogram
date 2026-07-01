@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <title>脑力测试 — 测测你的脑力值</title>
+  <link rel="stylesheet" href="/brain-test-miniprogram/css/app.css" />
+  <style>
+    body { margin: 0; background: #EFF6FF; font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Nunito', sans-serif; }
+    #app { min-height: 100vh; }
+    .loading-screen {
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      min-height: 100vh; background: linear-gradient(135deg, #2563EB, #7C3AED);
+      color: #fff; font-size: 18px;
+    }
+    .loading-screen .icon { font-size: 64px; margin-bottom: 16px; }
+    .loading-screen .title { font-size: 28px; font-weight: 700; margin-bottom: 8px; }
+  </style>
+</head>
+<body>
+  <div id="app">
+    <div class="loading-screen">
+      <div class="icon">🧠</div>
+      <div class="title">脑力测试</div>
+      <div>加载中...</div>
+    </div>
+  </div>
+  <script src="/brain-test-miniprogram/js/265.js"></script>
+  <script src="/brain-test-miniprogram/js/app.js"></script>
+</body>
+</html>
