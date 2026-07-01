@@ -55,7 +55,88 @@ export function squareSvg(): string {
   return svgUri(`
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 180">
       <rect x="25" y="15" width="150" height="150" rx="4" fill="#DBEAFE" stroke="#2563EB" stroke-width="3"/>
-      <text x="100" y="100" text-anchor="middle" font-size="18" fill="#1E40AF" font-weight="600">4条边</text>
+      <text x="100" y="100" text-anchor="middle" font-size="18" fill="#1E40AF" font-weight="600">正方形</text>
+    </svg>
+  `);
+}
+
+export function squareAreaSvg(): string {
+  return svgUri(`
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 170">
+      <text x="50" y="15" text-anchor="middle" font-size="11" fill="#64748B">边长×1</text>
+      <rect x="10" y="25" width="80" height="80" rx="4" fill="#DBEAFE" stroke="#2563EB" stroke-width="2.5"/>
+      <text x="50" y="70" text-anchor="middle" font-size="16" fill="#1E40AF" font-weight="700">面积=1</text>
+      <text x="90" y="130" text-anchor="middle" font-size="28" fill="#2563EB">→</text>
+      <text x="150" y="15" text-anchor="middle" font-size="11" fill="#64748B">边长×2</text>
+      <rect x="100" y="25" width="90" height="90" rx="4" fill="#DBEAFE" stroke="#2563EB" stroke-width="3"/>
+      <text x="145" y="55" text-anchor="middle" font-size="13" fill="#94A3B8">2×2格</text>
+      ${[[105,65],[155,65],[105,115],[155,115]].map(([x,y]) => `<rect x="${x}" y="${y}" width="40" height="40" fill="#BFDBFE" stroke="#93C5FD" stroke-width="1"/>`).join('')}
+    </svg>
+  `);
+}
+
+export function gridTianSvg(): string {
+  return svgUri(`
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+      <rect x="25" y="25" width="150" height="150" rx="2" fill="none" stroke="#2563EB" stroke-width="3"/>
+      <line x1="100" y1="25" x2="100" y2="175" stroke="#2563EB" stroke-width="3"/>
+      <line x1="25" y1="100" x2="175" y2="100" stroke="#2563EB" stroke-width="3"/>
+      <circle cx="50" cy="50" r="6" fill="#7C3AED"/>
+      <circle cx="150" cy="50" r="6" fill="#7C3AED"/>
+      <circle cx="50" cy="150" r="6" fill="#7C3AED"/>
+      <circle cx="150" cy="150" r="6" fill="#7C3AED"/>
+      <text x="100" y="195" text-anchor="middle" font-size="12" fill="#64748B">田字格</text>
+    </svg>
+  `);
+}
+
+export function tetrahedronSvg(): string {
+  return svgUri(`
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 190">
+      <polygon points="100,20 180,160 20,160" fill="#DBEAFE" stroke="#2563EB" stroke-width="2.5"/>
+      <line x1="100" y1="20" x2="100" y2="100" stroke="#2563EB" stroke-width="2" stroke-dasharray="6"/>
+      <line x1="100" y1="100" x2="180" y2="160" stroke="#2563EB" stroke-width="2"/>
+      <line x1="100" y1="100" x2="20" y2="160" stroke="#2563EB" stroke-width="2"/>
+      ${[[100,20],[100,100],[20,160],[100,160],[180,160]].map(([x,y]) => `<circle cx="${x}" cy="${y}" r="5" fill="#7C3AED"/>`).join('')}
+      <text x="100" y="185" text-anchor="middle" font-size="11" fill="#64748B">4个顶点</text>
+    </svg>
+  `);
+}
+
+export function hexagonSvg(): string {
+  const pts = [0,1,2,3,4,5].map(i => {
+    const a = (i * 60 - 30) * Math.PI / 180;
+    return `${100 + 75 * Math.cos(a)},${100 + 75 * Math.sin(a)}`;
+  }).join(' ');
+  return svgUri(`
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+      <polygon points="${pts}" fill="#DBEAFE" stroke="#2563EB" stroke-width="3"/>
+      <text x="100" y="105" text-anchor="middle" font-size="16" fill="#1E40AF" font-weight="600">六边形</text>
+    </svg>
+  `);
+}
+
+export function sphereSectionSvg(): string {
+  return svgUri(`
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 170">
+      <circle cx="100" cy="80" r="60" fill="#DBEAFE" stroke="#2563EB" stroke-width="2.5"/>
+      <ellipse cx="100" cy="80" rx="60" ry="15" fill="#BFDBFE" stroke="#2563EB" stroke-width="1.5" opacity="0.5"/>
+      <line x1="40" y1="80" x2="160" y2="80" stroke="#EF4444" stroke-width="2.5" stroke-dasharray="8"/>
+      <text x="170" y="85" font-size="13" fill="#EF4444" font-weight="600">截面=圆</text>
+    </svg>
+  `);
+}
+
+export function circleAreaSvg(): string {
+  return svgUri(`
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 170">
+      <text x="55" y="18" text-anchor="middle" font-size="11" fill="#64748B">r=1</text>
+      <circle cx="55" cy="85" r="35" fill="#DBEAFE" stroke="#2563EB" stroke-width="2.5"/>
+      <text x="55" y="88" text-anchor="middle" font-size="12" fill="#1E40AF" font-weight="600">π</text>
+      <text x="100" y="135" text-anchor="middle" font-size="24" fill="#2563EB">→</text>
+      <text x="145" y="18" text-anchor="middle" font-size="11" fill="#64748B">r=3</text>
+      <circle cx="145" cy="85" r="55" fill="#DBEAFE" stroke="#2563EB" stroke-width="2.5"/>
+      <text x="145" y="88" text-anchor="middle" font-size="12" fill="#1E40AF" font-weight="600">9π</text>
     </svg>
   `);
 }
@@ -289,17 +370,28 @@ export function getQuestionImage(type: string, id: string): string | undefined {
     S08: mirrorSvg,
     S09: diceSvg,
     S11: cubeSvg,
+    S12: squareAreaSvg,
     S13: () => clockSvg(3),
+    S15: circleAreaSvg,
     S17: coneTopViewSvg,
-    S21: mobiusSvg,
+    S18: squareSvg,
+    S20: cubeSvg,
+    S21: gridTianSvg,
+    S22: tetrahedronSvg,
+    S25: hexagonSvg,
+    S26: mobiusSvg,
+    S27: sphereSectionSvg,
+    S30: cubeSvg,
+    S33: cylinderSvg,
     S34: () => clockSvg(6),
+    S35: circleAreaSvg,
   };
 
   if (map[id]) return map[id]();
 
   // Generic illustrations by type
   const generic: Record<string, string> = {
-    spatial: cubeSvg(),
+    spatial: squareSvg(),
     number: barChartSvg(),
     logic: sequenceSvg(),
     memory: periodicTableSvg(),
