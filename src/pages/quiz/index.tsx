@@ -6,6 +6,7 @@ import { QUIZ_COUNT, DEFAULT_TIME_LIMIT } from '@/utils/constants';
 import { calcTotalScore, calcStats } from '@/utils/scoring';
 import { fetchQuestions, saveResult } from '@/services/cloud';
 import { getMockQuestions } from '@/utils/mockQuestions';
+import { getQuestionImage, TYPE_ICONS } from '@/utils/questionImage';
 import './index.scss';
 
 export default function QuizPage() {
@@ -138,7 +139,14 @@ export default function QuizPage() {
 
       <View className="question-area">
         <View className="question-card">
-          <View className="question-card__icon">🔢</View>
+          <View className="question-card__icon">{TYPE_ICONS[currentQ?.type] || '🧩'}</View>
+          {(() => {
+            const img = getQuestionImage(currentQ?.type, currentQ?._id);
+            if (img) {
+              return <View className="question-card__image" style={{ backgroundImage: `url(${img})` }} />;
+            }
+            return null;
+          })()}
           <Text className="question-card__text">{currentQ?.content.text}</Text>
           <Text className="question-card__label">请选择正确的答案</Text>
         </View>

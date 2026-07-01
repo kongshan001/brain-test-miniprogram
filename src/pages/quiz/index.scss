@@ -67,6 +67,18 @@
     margin-bottom: 12px;
   }
 
+  &__image {
+    width: 100%;
+    max-width: 260px;
+    height: 140px;
+    margin: 0 auto 16px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: var(--radius-md);
+    background-color: #fff;
+  }
+
   &__text {
     font-size: 18px;
     font-weight: 600;
